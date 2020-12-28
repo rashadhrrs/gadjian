@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 
-import Toolbar from './components/Toolbar/Toolbar'
-import SideDrawer from './components/SideDrawer/SideDrawer'
-import Backdrop from "./components/Backdrop/Backdrop"
+
+import Toolbar from 'components/Toolbar/Toolbar'
+import SideDrawer from 'components/SideDrawer/SideDrawer'
+import Backdrop from "components/Backdrop/Backdrop"
+import Personnel from "pages/PersonnelList"
 
 class App extends Component{
+  
 state={
   sideDrawerOpen: false,
   matches: window.matchMedia("(min-width: 768px)").matches
@@ -16,9 +19,9 @@ state={
     })
 }
 
-backdropClickHandler = () => {
-  this.setState({sideDrawerOpen: false})
-}
+// backdropClickHandler = () => {
+//   this.setState({sideDrawerOpen: false})
+// }
 
 componentDidMount() {
   const handler = e => this.setState({matches: e.matches});
@@ -29,17 +32,20 @@ componentDidMount() {
     let sideDrawer;
     let backdrop;
 
-    if(this.state.sideDrawerOpen) {
+    if(this.state.matches) {
       sideDrawer = <SideDrawer/>
-      backdrop = <Backdrop click ={this.backdropClickHandler}/>
     }
+    
+    if(this.state.sideDrawerOpen){
+      sideDrawer = <SideDrawer/>
+      }
   return (
     <div style={{height: '100%'}}>
         <Toolbar drawerClickHandler={this.drawerToogleClickHandler}/>
         {sideDrawer}
-        {backdrop}
-        <main style ={{marginTop: '100px', marginLeft: '500px'}}>
-        {/* {this.state.matches && ()} */}
+        {/* {backdrop} */}
+        <main>
+        <Personnel/>
         </main>
         
     </div>

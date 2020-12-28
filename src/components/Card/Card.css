@@ -1,0 +1,44 @@
+p {
+    margin: 0;
+}
+
+.Card {
+    background: white;
+    border-radius: 10px;
+    width: 250px;
+    margin: auto;
+    justify-content: center;
+    height: 400px;  
+}
+
+.Card-img {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.Card-img img{
+    border-radius: 50%;
+}
+
+.Card-name {
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.Card-info {
+    margin-left: 15px;
+}
+
+.Card-data {
+    padding-bottom: 10px;
+}
+
+.Card-data .title {
+    font-weight: 700;
+}
+

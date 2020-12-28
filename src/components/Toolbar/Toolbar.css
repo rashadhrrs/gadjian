@@ -3,7 +3,7 @@
     top:0;
     left:0;
     width: 100%;
-    background: blueviolet;
+    background: white;
     height: 70px;
     margin-bottom: 20px;
     z-index: 200;
@@ -17,7 +17,7 @@
 }
 
 .toolbar_logo {
-    margin-left: 0.5rem;
+    margin-left: 1rem;
 }
 
 .toolbar_logo a {
@@ -53,6 +53,21 @@
 
 @media (min-width: 769px) {
     .toolbar_toogle-button {
+        display: none;
+    }
+}
+
+@media (max-width: 769px) {
+    
+
+    .toolbar_navigation-items ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex                                                                                                                                                                   ;
+    }
+    
+    .toolbar_navigation-items li {
         display: none;
     }
 }

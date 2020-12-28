@@ -15,7 +15,7 @@ const toolbar = props => (
             <div className="spacer"></div>
             <div className="toolbar_navigation-items">
                 <ul>
-                    <li><a href="/">Products</a></li>
+                    <li>Hallo, <a href="/" style={{color: "#23C7C6", fontWeight:"bold"}}>Gadjian User</a></li>
                     <li><a href="/">Users</a></li>
                 </ul>
             </div>
